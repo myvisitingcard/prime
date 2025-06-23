@@ -1,0 +1,132 @@
+:root {
+  --poppins: "poppins", sans-serif;
+  --darkColor: #212121;
+  --redColor: #dc2525;
+  --diffWhiteColor: #faf9f9;
+  --normalWhite: white;
+  --fontSizeBigScreen: 17 px;
+  --fontSizeForLogo: 40px;
+  --gapBetweenElements: 10px;
+  --paddingInsideElement: 20px;
+  --borderRadius: 5px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+  text-decoration: none;
+}
+
+/* Default Styling */
+html,
+body {
+  width: 100%;
+  background: var(--diffWhiteColor);
+  padding: 10px;
+}
+.flxjccaic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: var(--normalWhite);
+  font-size: var(--fontSizeBigScreen);
+}
+a:hover {
+  cursor: pointer;
+  color: var(--redColor);
+  transition: all ease 0.4s;
+}
+/* Card Styling starts from here */
+.card {
+  width: 475px;
+  height: auto;
+  border-radius: 5px;
+  margin: 20px 0;
+  flex-direction: column;
+  gap: var(--gapBetweenElements);
+  background: white;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.logoSection {
+  width: 100%;
+  height: 250px;
+  background: white;
+  padding: var(--paddingInsideElement);
+  border-radius: 5px 5px 0px 0px;
+}
+.logoSection img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Lower part of Card*/
+.cardInfo {
+  width: 100%;
+  min-height: 400px;
+  color: var(--normalWhite);
+  background: var(--darkColor);
+  padding: var(--paddingInsideElement);
+  flex-direction: column;
+  justify-content: start;
+  gap: 50px;
+  position: relative;
+  border-radius: 0px 0px 5px 5px;
+}
+.cardInfo::before{
+  content: "";
+  width: 50%;
+  background: var(--redColor);
+  height: 10px;
+  position: absolute;
+  top: -10px;
+  border-radius: 2px 2px 0px 0px;
+}
+.logoSection2 {
+  width: 100%;
+  flex-direction: column;
+}
+.logoSection2 h1 {
+  font-size: var(--fontSizeForLogo);
+  height: 46px;
+}
+.logoSection2 h1 span {
+  color: var(--redColor);
+}
+.logoSection2 p {
+  font-size: 15px;
+  letter-spacing: 2.5px;
+}
+.information {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.phone,
+.onlinePresence,
+.address {
+  display: flex;
+  align-items: start;
+  gap: var(--gapBetweenElements);
+}
+.phone div,
+.onlinePresence div,
+.address div {
+  display: flex;
+  flex-direction: column;
+}
+.fa-solid {
+  background: var(--redColor);
+  border-radius: 50px;
+  padding: 10px;
+  font-size: var(--fontSizeBigScreen);
+}
